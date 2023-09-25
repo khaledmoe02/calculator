@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/addbutton4"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:layout_marginEnd="97dp"
+        android:text="+"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBaseline_toBaselineOf="@+id/dividebutton3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dividebutton3"
+        android:onClick="clickAddFunction"/>
+
+    <Button
+        android:id="@+id/dividebutton3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="104dp"
+        android:text="/"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/addbutton4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multiplybutton"
+        android:onClick="clickDivideFunction"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="82dp"
+        android:layout_marginBottom="76dp"
+        android:text="Calculator"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/myFirstNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/myFirstNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="44dp"
+        android:ems="10"
+        android:hint="Enter First Number"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/mySecondNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/mySecondNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="66dp"
+        android:ems="10"
+        android:hint="Enter Second Number"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/multiplybutton"
+        app:layout_constraintEnd_toEndOf="@+id/myFirstNumber"
+        app:layout_constraintTop_toBottomOf="@+id/myFirstNumber" />
+
+    <Button
+        android:id="@+id/multiplybutton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="11dp"
+        android:text="*"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/dividebutton3"
+        app:layout_constraintEnd_toStartOf="@+id/subtractbutton2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mySecondNumber"
+        android:onClick="clickMultFunction"/>
+
+    <Button
+        android:id="@+id/subtractbutton2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginBottom="7dp"
+        android:text="-"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/addbutton4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/multiplybutton"
+        app:layout_constraintTop_toTopOf="@+id/multiplybutton"
+        android:onClick="clickSubtractFunction"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
